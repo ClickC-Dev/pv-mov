@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-outfit);
+
+  /* MOV Premium Palette */
+  --color-primary: #fc0f57;
+  /* Rosa Principal */
+  --color-primary-sec: #ffecf3;
+  /* Rosa Secundário */
+
+  --color-accent: #01e3f3;
+  /* Azul Destaque */
+  --color-blue-main: #3654fd;
+  /* Azul Padrão */
+  --color-blue-sec: #e7ebff;
+  /* Azul Secundário */
+
+  --color-red-main: #ff0007;
+  /* Vermelho Padrão */
+  --color-red-sec: #fff1f2;
+  /* Vermelho Secundário */
+
+  --color-green-main: #4aab26;
+  /* Verde */
+  --color-green-sec: #ecffe5;
+  /* Verde Secundário */
+
+  --color-surface: #292d34;
+  /* Preto */
+  --color-surface-sec: #6f6f6f;
+  /* Preto Secundário */
+  --color-surface-light: #f2f2f2;
+  /* Preto Claro */
+
+  --color-bg-dark: #01044d;
+  /* Fundo Escuro */
+  --color-bg-semi: #e4eaf2;
+  /* Fundo Semi Claro */
+  --color-bg-light: #f5f8ff;
+  /* Fundo Claro */
+  --color-bg-redish: #fff6f2;
+  /* Fundo Avermelhado */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased font-sans text-surface bg-bg-light;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold text-surface;
+  }
+}
+
+@utility container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
