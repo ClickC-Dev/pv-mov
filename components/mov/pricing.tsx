@@ -1,0 +1,183 @@
+"use client"
+
+import { Button } from "@/components/ui/button"
+import { Check, ArrowRight, Sparkles, Crown } from "lucide-react"
+import { SectionReveal } from "@/components/ui/section-reveal"
+
+const plans = [
+  {
+    id: "clickapp",
+    name: "ClickApp",
+    badge: null,
+    description: "Educação prática e ferramentas operacionais para iniciar sua jornada.",
+    price: "47",
+    period: "/mês",
+    originalPrice: null,
+    features: [
+      "Caixas de Ferramentas (concorrência, vendas, etc.)",
+      "Sistemas práticos (contratos, cálculos, etc.)",
+      "Cursos específicos (IRPF, Reforma Tributária)",
+      "CLIA - Inteligência Artificial Contábil",
+    ],
+    cta: "Começar com ClickApp",
+    highlight: false,
+    variant: "outline" as const,
+  },
+  {
+    id: "mov-clickapp",
+    name: "MOV + ClickApp",
+    badge: "Mais Popular",
+    description: "O sistema completo para posicionar, atrair e vender no digital.",
+    price: "97",
+    period: "/mês",
+    originalPrice: "197",
+    features: [
+      "Tudo do ClickApp incluso",
+      "Área de Estrutura (site, landing pages, quiz, chatbot)",
+      "Área de Conteúdo (criação, publicação, métricas)",
+      "Área de Marketing (prospecção, materiais, anúncios)",
+      "Área de Vendas (CRM, campanhas, propostas)",
+      "Suporte e atualizações contínuas",
+    ],
+    cta: "Quero a MOV + ClickApp",
+    highlight: true,
+    variant: "default" as const,
+  },
+]
+
+export function Pricing() {
+  return (
+    <section id="planos" className="py-28 lg:py-36 bg-bg-light relative overflow-hidden bg-mesh">
+      <div className="container-custom relative z-10">
+
+        {/* Header */}
+        <SectionReveal>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-4 block">
+              Planos e Preços
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-surface mb-6">
+              Investimento que{" "}
+              <span className="text-gradient">se paga no primeiro contrato</span>
+            </h2>
+            <p className="text-lg text-surface-sec">
+              Escolha o plano ideal para o momento do seu negócio. Sem fidelidade, cancele quando quiser.
+            </p>
+          </div>
+        </SectionReveal>
+
+        {/* Plans Grid */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {plans.map((plan, i) => (
+            <SectionReveal key={plan.id} delay={i * 150}>
+              <div
+                className={`relative rounded-3xl p-8 md:p-10 h-full flex flex-col ${
+                  plan.highlight
+                    ? "bg-bg-dark text-white border-2 border-primary/30 shadow-2xl shadow-primary/10"
+                    : "bg-white border border-slate-200 shadow-lg"
+                }`}
+              >
+                {/* Badge */}
+                {plan.badge && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                    <div className="flex items-center gap-1.5 bg-primary text-white px-5 py-1.5 rounded-full text-sm font-bold shadow-lg shadow-primary/30">
+                      <Crown className="w-4 h-4" />
+                      {plan.badge}
+                    </div>
+                  </div>
+                )}
+
+                {/* Decorative */}
+                {plan.highlight && (
+                  <>
+                    <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-[80px]" />
+                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/10 rounded-full blur-[60px]" />
+                  </>
+                )}
+
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Name */}
+                  <h3 className={`text-2xl font-heading font-bold mb-2 ${plan.highlight ? "text-white" : "text-surface"}`}>
+                    {plan.name}
+                  </h3>
+                  <p className={`text-sm mb-6 ${plan.highlight ? "text-slate-400" : "text-surface-sec"}`}>
+                    {plan.description}
+                  </p>
+
+                  {/* Price */}
+                  <div className="mb-8">
+                    {plan.originalPrice && (
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className={`text-sm line-through ${plan.highlight ? "text-slate-500" : "text-surface-sec/50"}`}>
+                          R$ {plan.originalPrice}
+                        </span>
+                        <span className="text-xs font-bold bg-green-main/15 text-green-main px-2 py-0.5 rounded-full">
+                          Desconto Contábil
+                        </span>
+                      </div>
+                    )}
+                    <div className="flex items-baseline gap-1">
+                      <span className={`text-sm font-medium ${plan.highlight ? "text-slate-400" : "text-surface-sec"}`}>R$</span>
+                      <span className={`text-5xl font-heading font-extrabold ${plan.highlight ? "text-white" : "text-surface"}`}>
+                        {plan.price}
+                      </span>
+                      <span className={`text-lg font-medium ${plan.highlight ? "text-slate-400" : "text-surface-sec"}`}>
+                        {plan.period}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Features */}
+                  <ul className="space-y-4 mb-10 flex-1">
+                    {plan.features.map((feature, fi) => (
+                      <li key={fi} className="flex items-start gap-3">
+                        <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
+                          plan.highlight ? "bg-green-main/20" : "bg-green-main/10"
+                        }`}>
+                          <Check className="w-3 h-3 text-green-main" />
+                        </div>
+                        <span className={`text-sm ${plan.highlight ? "text-slate-300" : "text-surface-sec"}`}>
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* CTA */}
+                  <a href="https://app.clickc.com.br" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      size="lg"
+                      variant={plan.variant}
+                      className={`w-full font-bold text-base ${
+                        plan.highlight
+                          ? "shadow-xl shadow-primary/30"
+                          : "border-slate-300 text-surface hover:bg-surface hover:text-white"
+                      }`}
+                    >
+                      {plan.cta}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </SectionReveal>
+          ))}
+        </div>
+
+        {/* Additional info */}
+        <SectionReveal delay={200}>
+          <div className="text-center mt-12 max-w-2xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-2xl shadow-sm border border-slate-100">
+              <Sparkles className="w-5 h-5 text-primary" />
+              <p className="text-sm text-surface-sec">
+                <strong className="text-surface">Serviços adicionais:</strong>{" "}
+                MAFA (R$ 97 único) e VIRA (R$ 97/3 meses) disponíveis após assinatura.
+              </p>
+            </div>
+          </div>
+        </SectionReveal>
+
+      </div>
+    </section>
+  )
+}
