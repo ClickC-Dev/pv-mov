@@ -13,16 +13,19 @@ export function Footer() {
 
         <div className="container-custom relative z-10 text-center max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 leading-tight">
-            Pare de depender de indicação.{" "}
-            <span className="text-gradient">Comece a vender com método.</span>
+            Cada dia sem a MOV é um dia de{" "}
+            <span className="text-gradient">contratos perdidos.</span>
           </h2>
-          <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
-            A MOV já está transformando a forma como contadores vendem no digital. Chegou a sua vez.
+          <p className="text-xl text-slate-400 mb-4 max-w-2xl mx-auto">
+            Seus concorrentes já estão se posicionando. A pergunta é: você vai esperar até quando?
+          </p>
+          <p className="text-lg text-white font-bold mb-10">
+            Ative sua máquina. Pare de depender de indicação. Comece hoje.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://app.clickc.com.br" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="font-bold text-lg shadow-xl shadow-primary/30 animate-glow-pulse w-full sm:w-auto">
-                Começar meu Teste Grátis
+                Quero minha contabilidade vendendo no automático
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </a>
@@ -50,7 +53,6 @@ export function Footer() {
             {/* Links */}
             <div className="flex items-center gap-8">
               {[
-                { label: "O que é", href: "#o-que-e" },
                 { label: "Como funciona", href: "#metodologia" },
                 { label: "Módulos", href: "#modulos" },
                 { label: "Planos", href: "#planos" },

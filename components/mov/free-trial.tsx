@@ -21,9 +21,9 @@ export function FreeTrial() {
               <div className="space-y-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium">
                   <Zap className="w-4 h-4 text-accent" />
-                  <span className="text-accent font-bold">Novo</span>
-                  <span className="text-slate-400">|</span>
-                  <span className="text-slate-300">Test Drive Gratuito</span>
+                  <span className="text-accent font-bold">Grátis</span>
+                  <span className="text-white/30">|</span>
+                  <span className="text-slate-300">Sem compromisso</span>
                 </div>
 
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight">
@@ -32,11 +32,11 @@ export function FreeTrial() {
                 </h2>
 
                 <p className="text-lg text-slate-400 leading-relaxed">
-                  Antes de ativar, faça um test drive. Coloque os dados da sua contabilidade e veja na hora como a MOV funcionaria para você — com site, conteúdo, leads e tudo mais.
+                  Sem cartão. Sem compromisso. Coloque os dados da sua contabilidade e veja na hora como a MOV funcionaria para você — site, conteúdo, leads, tudo personalizado.
                 </p>
 
-                <p className="text-white font-medium text-lg">
-                  É uma simulação real, como se você estivesse ativando hoje.
+                <p className="text-white font-bold text-lg">
+                  Se não gostar, não ativa. Simples assim.
                 </p>
 
                 <a href="https://app.clickc.com.br" target="_blank" rel="noopener noreferrer">
@@ -45,10 +45,6 @@ export function FreeTrial() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
-
-                <p className="text-xs text-slate-500">
-                  Acesse app.clickc.com.br &rarr; Clique em &ldquo;Clique aqui para Teste Grátis&rdquo;
-                </p>
               </div>
             </SectionReveal>
 
