@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check, ArrowRight, Sparkles, Crown } from "lucide-react"
+import { Check, ArrowRight, Crown, Clock, Gift } from "lucide-react"
 import { SectionReveal } from "@/components/ui/section-reveal"
 
 const plans = [
@@ -9,7 +9,7 @@ const plans = [
     id: "clickapp",
     name: "ClickApp",
     badge: null,
-    description: "Educação prática e ferramentas operacionais para iniciar sua jornada.",
+    description: "Ferramentas e educação prática para iniciar sua jornada digital.",
     price: "47",
     period: "/mês",
     originalPrice: null,
@@ -27,19 +27,20 @@ const plans = [
     id: "mov-clickapp",
     name: "MOV + ClickApp",
     badge: "Mais Popular",
-    description: "O sistema completo para posicionar, atrair e vender no digital.",
+    description: "A máquina completa para atrair, posicionar e vender no automático.",
     price: "97",
     period: "/mês",
     originalPrice: "197",
     features: [
       "Tudo do ClickApp incluso",
       "Área de Estrutura (site, landing pages, quiz, chatbot)",
-      "Área de Conteúdo (criação, publicação, métricas)",
-      "Área de Marketing (prospecção, materiais, anúncios)",
-      "Área de Vendas (CRM, campanhas, propostas)",
+      "Área de Conteúdo (criação e publicação automática)",
+      "Área de Marketing (prospecção IG, LinkedIn, Maps)",
+      "Área de Vendas (CRM, WhatsApp, propostas)",
+      "Automações e IA integradas",
       "Suporte e atualizações contínuas",
     ],
-    cta: "Quero a MOV + ClickApp",
+    cta: "Ativar minha máquina agora",
     highlight: true,
     variant: "default" as const,
   },
@@ -52,9 +53,9 @@ export function Pricing() {
 
         {/* Header */}
         <SectionReveal>
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-6">
             <span className="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-4 block">
-              Planos e Preços
+              Oferta
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-surface mb-6">
               Investimento que{" "}
@@ -63,6 +64,18 @@ export function Pricing() {
             <p className="text-lg text-surface-sec">
               Escolha o plano ideal para o momento do seu negócio. Sem fidelidade, cancele quando quiser.
             </p>
+          </div>
+        </SectionReveal>
+
+        {/* Urgency Banner */}
+        <SectionReveal delay={100}>
+          <div className="flex justify-center mb-14">
+            <div className="inline-flex items-center gap-3 bg-red-sec border border-red-main/20 px-6 py-3 rounded-2xl">
+              <Clock className="w-5 h-5 text-red-main" />
+              <p className="text-sm font-bold text-red-main">
+                Vagas limitadas para ativação com desconto contábil. Ative antes que o preço suba.
+              </p>
+            </div>
           </div>
         </SectionReveal>
 
@@ -112,7 +125,7 @@ export function Pricing() {
                           R$ {plan.originalPrice}
                         </span>
                         <span className="text-xs font-bold bg-green-main/15 text-green-main px-2 py-0.5 rounded-full">
-                          Desconto Contábil
+                          -51% Desconto Contábil
                         </span>
                       </div>
                     )}
@@ -125,10 +138,15 @@ export function Pricing() {
                         {plan.period}
                       </span>
                     </div>
+                    {plan.highlight && (
+                      <p className="text-xs text-slate-500 mt-2">
+                        Menos que R$ 3,23/dia. Menos que um cafezinho.
+                      </p>
+                    )}
                   </div>
 
                   {/* Features */}
-                  <ul className="space-y-4 mb-10 flex-1">
+                  <ul className="space-y-4 mb-8 flex-1">
                     {plan.features.map((feature, fi) => (
                       <li key={fi} className="flex items-start gap-3">
                         <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
@@ -143,6 +161,19 @@ export function Pricing() {
                     ))}
                   </ul>
 
+                  {/* Bonus */}
+                  {plan.highlight && (
+                    <div className="mb-6 p-4 rounded-2xl bg-accent/10 border border-accent/20">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Gift className="w-4 h-4 text-accent" />
+                        <span className="text-xs font-bold text-accent uppercase tracking-wider">Bônus exclusivo</span>
+                      </div>
+                      <p className="text-sm text-slate-400">
+                        Ative agora e ganhe acesso ao módulo <strong className="text-white">VIRA IR</strong> — estratégia completa para captar clientes na temporada do Imposto de Renda.
+                      </p>
+                    </div>
+                  )}
+
                   {/* CTA */}
                   <a href="https://app.clickc.com.br" target="_blank" rel="noopener noreferrer">
                     <Button
@@ -150,7 +181,7 @@ export function Pricing() {
                       variant={plan.variant}
                       className={`w-full font-bold text-base ${
                         plan.highlight
-                          ? "shadow-xl shadow-primary/30"
+                          ? "shadow-xl shadow-primary/30 animate-glow-pulse"
                           : "border-slate-300 text-surface hover:bg-surface hover:text-white"
                       }`}
                     >
@@ -163,19 +194,6 @@ export function Pricing() {
             </SectionReveal>
           ))}
         </div>
-
-        {/* Additional info */}
-        <SectionReveal delay={200}>
-          <div className="text-center mt-12 max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-2xl shadow-sm border border-slate-100">
-              <Sparkles className="w-5 h-5 text-primary" />
-              <p className="text-sm text-surface-sec">
-                <strong className="text-surface">Serviços adicionais:</strong>{" "}
-                MAFA (R$ 97 único) e VIRA (R$ 97/3 meses) disponíveis após assinatura.
-              </p>
-            </div>
-          </div>
-        </SectionReveal>
 
       </div>
     </section>

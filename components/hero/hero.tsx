@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle2, Play, TrendingUp, Users, FileCheck } from "lucide-react"
+import { ArrowRight, AlertTriangle, TrendingUp, Users, FileCheck } from "lucide-react"
 import { SectionReveal } from "@/components/ui/section-reveal"
 
 export function Hero() {
@@ -19,53 +19,46 @@ export function Hero() {
         <div className="h-[600px] w-[600px] rounded-full bg-accent blur-[150px]" />
       </div>
 
-      {/* Orbiting decorative elements */}
-      <div className="absolute top-1/3 right-1/4 hidden lg:block">
-        <div className="w-2 h-2 rounded-full bg-primary animate-orbit opacity-40" />
-      </div>
-      <div className="absolute bottom-1/3 left-1/4 hidden lg:block">
-        <div className="w-1.5 h-1.5 rounded-full bg-accent animate-orbit opacity-30" style={{ animationDelay: "-4s", animationDuration: "16s" }} />
-      </div>
-
       <div className="container-custom relative z-10 py-20 lg:py-32">
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-12 items-center">
           {/* Content Column */}
-          <div className="space-y-10">
+          <div className="space-y-8">
             <SectionReveal>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-slate-300">
-                <span className="w-2 h-2 rounded-full bg-green-main animate-pulse" />
-                <span>Plataforma ClickC</span>
-                <span className="text-white/30">|</span>
-                <span className="text-primary font-bold">MOV</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-main/15 border border-red-main/30 text-sm font-bold">
+                <AlertTriangle className="w-4 h-4 text-red-main" />
+                <span className="text-red-main">Sua contabilidade está em risco</span>
               </div>
             </SectionReveal>
 
             <SectionReveal delay={100}>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold tracking-tight leading-[1.05]">
-                Transforme sua contabilidade em uma{" "}
+                Se você ainda depende de indicação,{" "}
                 <span className="text-gradient">
-                  Máquina de Vendas
+                  está ficando para trás.
                 </span>
               </h1>
             </SectionReveal>
 
             <SectionReveal delay={200}>
               <p className="max-w-xl text-lg lg:text-xl text-slate-400 leading-relaxed">
-                A MOV é o método e sistema que transforma contadores técnicos em negócios contábeis que{" "}
-                <strong className="text-white">atraem, posicionam e vendem</strong> com consistência no digital.
+                A MOV cria uma <strong className="text-white">máquina própria de aquisição de clientes</strong> para sua contabilidade.
+                Site. Conteúdo. Leads. CRM. IA.{" "}
+                <strong className="text-accent">Tudo rodando no automático.</strong>
               </p>
             </SectionReveal>
 
             <SectionReveal delay={300}>
-              <div className="space-y-4">
+              <div className="space-y-3">
+                <p className="text-sm font-bold text-slate-500 uppercase tracking-wider">Enquanto você trabalha, a MOV:</p>
                 {[
-                  "Você não precisa postar todo dia.",
-                  "Não precisa virar influencer.",
-                  "E não precisa disputar cliente por preço.",
+                  "Gera leads qualificados todos os dias",
+                  "Publica conteúdo com autoridade no seu nome",
+                  "Faz follow-up automático via WhatsApp",
+                  "Fecha contratos enquanto você dorme",
                 ].map((text, i) => (
                   <div key={i} className="flex items-center gap-3 text-slate-300 group">
-                    <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition-colors">
-                      <CheckCircle2 className="h-4 w-4 text-accent" />
+                    <div className="w-5 h-5 rounded-full bg-green-main/20 flex items-center justify-center shrink-0">
+                      <div className="w-2 h-2 rounded-full bg-green-main" />
                     </div>
                     <span className="text-base">{text}</span>
                   </div>
@@ -77,14 +70,13 @@ export function Hero() {
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <a href="https://app.clickc.com.br" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="w-full sm:w-auto font-bold text-lg shadow-xl shadow-primary/30 animate-glow-pulse">
-                    Quero testar grátis
+                    Quero minha máquina rodando
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
-                <a href="#metodologia">
+                <a href="#custo">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/20 text-white hover:bg-white/5">
-                    <Play className="mr-2 h-4 w-4" />
-                    Como funciona
+                    Ver o custo de não ter
                   </Button>
                 </a>
               </div>
@@ -100,30 +92,19 @@ export function Hero() {
                 <div className="flex items-center justify-between border-b border-white/10 pb-5 mb-6">
                   <div>
                     <p className="text-xs text-slate-500 uppercase tracking-wider font-medium">Painel MOV</p>
-                    <p className="font-heading font-bold text-xl text-white mt-1">Negócio Contábil Escalável</p>
+                    <p className="font-heading font-bold text-xl text-white mt-1">Resultados reais</p>
                   </div>
                   <div className="h-12 w-12 rounded-2xl bg-green-main/15 flex items-center justify-center">
                     <TrendingUp className="h-6 w-6 text-green-main" />
                   </div>
                 </div>
 
-                {/* Progress */}
-                <div className="space-y-3 mb-6">
-                  <div className="flex justify-between text-xs">
-                    <span className="text-slate-400">Processamento de vendas</span>
-                    <span className="text-accent font-mono font-bold">85%</span>
-                  </div>
-                  <div className="h-2.5 w-full rounded-full bg-white/5 overflow-hidden">
-                    <div className="h-full w-[85%] rounded-full bg-gradient-to-r from-accent to-blue-main animate-shimmer" />
-                  </div>
-                </div>
-
                 {/* Stats Grid */}
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-3 gap-3 mb-5">
                   <div className="rounded-2xl bg-bg-dark/80 p-4 border border-white/5 text-center">
                     <Users className="w-4 h-4 text-accent mx-auto mb-2" />
                     <p className="text-xl font-bold text-white font-mono">+127</p>
-                    <p className="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Leads</p>
+                    <p className="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Leads/mês</p>
                   </div>
                   <div className="rounded-2xl bg-bg-dark/80 p-4 border border-white/5 text-center">
                     <FileCheck className="w-4 h-4 text-primary mx-auto mb-2" />
@@ -137,17 +118,14 @@ export function Hero() {
                   </div>
                 </div>
 
-                {/* Activity mini */}
-                <div className="mt-5 pt-5 border-t border-white/5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center">
-                      <CheckCircle2 className="w-4 h-4 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-xs text-white font-medium">Novo contrato fechado</p>
-                      <p className="text-[10px] text-slate-500">Empresa ABC - R$ 2.400/mês</p>
-                    </div>
-                    <span className="text-[10px] text-accent font-mono">agora</span>
+                {/* Live notification */}
+                <div className="rounded-2xl bg-green-main/10 border border-green-main/20 p-4 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-green-main/20 flex items-center justify-center shrink-0">
+                    <div className="w-3 h-3 rounded-full bg-green-main animate-pulse" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs font-bold text-green-main">Novo contrato fechado agora</p>
+                    <p className="text-[10px] text-slate-400">Empresa ABC - R$ 2.400/mês via MOV</p>
                   </div>
                 </div>
               </div>
