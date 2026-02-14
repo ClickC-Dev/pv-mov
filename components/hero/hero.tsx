@@ -30,7 +30,7 @@ export function Hero() {
             </SectionReveal>
 
             <SectionReveal delay={100}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold tracking-tight leading-[1.05]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold tracking-tight leading-[1.05] text-white">
                 Você não tem problema de cliente.{" "}
                 <span className="text-gradient">
                   Tem problema de estrutura.

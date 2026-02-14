@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     "vendas para contadores",
     "máquina online de vendas",
   ],
+  icons: {
+    icon: "/favicon.svg",
+  },
 }
 
 export default function RootLayout({

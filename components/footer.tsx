@@ -38,9 +38,13 @@ export function Footer() {
         <div className="container-custom py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo */}
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-heading font-black text-white text-xs">
-                MOV
+            <div className="flex flex-col items-start gap-2">
+              <div className="h-8 w-28">
+                <img
+                  src="/clickc-negative.svg"
+                  alt="ClickC Logo"
+                  className="h-full w-full object-contain object-left"
+                />
               </div>
               <div>
                 <span className="font-heading font-bold text-white text-sm">
