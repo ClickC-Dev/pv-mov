@@ -6,9 +6,37 @@ import {
   PenTool, Calendar, FileVideo, BarChart3, Linkedin, MessageCircle,
   Megaphone, Instagram, MapPin, Search, BookOpen, FileImage, Zap,
   DollarSign, LayoutDashboard, Users, Kanban, Workflow, Plug, FileCheck, ClipboardList, Target,
+  UserX, Palette, Volume2, LineChart,
 } from "lucide-react"
 import { SectionReveal } from "@/components/ui/section-reveal"
 import { cn } from "@/lib/utils"
+
+const noNeedToHire = [
+  {
+    icon: Palette,
+    role: "Social Media",
+    cost: "R$ 2.000/mês",
+    replacement: "A MOV cria, agenda e publica conteúdo automaticamente.",
+  },
+  {
+    icon: Volume2,
+    role: "Gestor de Tráfego",
+    cost: "R$ 1.500/mês",
+    replacement: "Anúncios prontos e prospecção automática integrados.",
+  },
+  {
+    icon: UserX,
+    role: "SDR / Pré-vendedor",
+    cost: "R$ 2.500/mês",
+    replacement: "IA prospecta, qualifica e agenda no WhatsApp por você.",
+  },
+  {
+    icon: LineChart,
+    role: "Designer + Copywriter",
+    cost: "R$ 3.000/mês",
+    replacement: "Artes, textos e roteiros gerados prontos para usar.",
+  },
+]
 
 const areas = [
   {
@@ -16,16 +44,15 @@ const areas = [
     label: "Estrutura",
     icon: LayoutTemplate,
     color: "primary",
-    tagline: "A \"Loja\" do seu negócio digital",
-    description: "É o alicerce de toda estruturação do negócio digital. Em uma metáfora, seria a \"Loja\" no mundo digital. Ative qualquer módulo que faça sentido para sua estratégia.",
+    tagline: "Sua \"Loja\" no digital — pronta em minutos",
     modules: [
-      { icon: Globe, name: "Site", desc: "Seu site institucional já publicado" },
-      { icon: FileText, name: "Página de Captura", desc: "Coleta leads em troca de algo de valor" },
-      { icon: ShoppingCart, name: "Página de Vendas", desc: "Página pronta pra conversão" },
-      { icon: Target, name: "Quiz", desc: "Interativo e ideal pra captar leads frios" },
-      { icon: Bot, name: "ChatBot", desc: "Conversa automática 24h pro seu negócio" },
-      { icon: Phone, name: "Call Fake", desc: "Simulação de ligação personalizada com áudio" },
-      { icon: Settings, name: "Sistema", desc: "Tenha seu sistema personalizado" },
+      { icon: Globe, name: "Site", desc: "Publicado e otimizado" },
+      { icon: FileText, name: "Página de Captura", desc: "Coleta leads automático" },
+      { icon: ShoppingCart, name: "Página de Vendas", desc: "Pronta para conversão" },
+      { icon: Target, name: "Quiz", desc: "Captação interativa" },
+      { icon: Bot, name: "ChatBot", desc: "Atendimento 24h com IA" },
+      { icon: Phone, name: "Call Fake", desc: "Ligação personalizada" },
+      { icon: Settings, name: "Sistema", desc: "Personalizado para você" },
     ],
   },
   {
@@ -33,15 +60,14 @@ const areas = [
     label: "Conteúdo",
     icon: PenTool,
     color: "blue-main",
-    tagline: "A \"Vitrine\" da sua marca",
-    description: "É o que mostra que a marca está viva na internet. A \"Vitrine\" da \"Loja\", onde mostra que a marca é atualizada, segue tendências, é profissional e passa autoridade.",
+    tagline: "Sua marca viva e com autoridade — sem esforço",
     modules: [
-      { icon: PenTool, name: "Criação", desc: "Posts, stories e reels com estratégias validadas" },
-      { icon: Calendar, name: "Publicação Meta", desc: "Conteúdo no Facebook e Instagram sem esforço" },
-      { icon: FileVideo, name: "Roteiros", desc: "O que falar, como falar e quando falar" },
-      { icon: BarChart3, name: "Métricas", desc: "Acompanhe o desempenho em tempo real" },
-      { icon: Linkedin, name: "Publicação LinkedIn", desc: "Posicionamento profissional automático" },
-      { icon: MessageCircle, name: "Interação", desc: "Engajamento para manter audiência quente" },
+      { icon: PenTool, name: "Criação", desc: "Posts, stories e reels prontos" },
+      { icon: Calendar, name: "Publicação", desc: "Automática no Meta e LinkedIn" },
+      { icon: FileVideo, name: "Roteiros", desc: "O que falar nos vídeos" },
+      { icon: BarChart3, name: "Métricas", desc: "Desempenho em tempo real" },
+      { icon: Linkedin, name: "LinkedIn", desc: "Posicionamento profissional" },
+      { icon: MessageCircle, name: "Interação", desc: "Engajamento automático" },
     ],
   },
   {
@@ -49,15 +75,14 @@ const areas = [
     label: "Marketing",
     icon: Megaphone,
     color: "accent",
-    tagline: "Buscando oportunidades na internet",
-    description: "Um motor que busca novas oportunidades na internet. Em uma metáfora, seria um vendedor coletando contatos em uma avenida movimentada.",
+    tagline: "Leads chegando todo dia — sem você precisar fazer nada",
     modules: [
-      { icon: Instagram, name: "Prospecção Instagram", desc: "Coleta leads que seguem você ou seus concorrentes" },
-      { icon: MapPin, name: "Prospecção Local", desc: "Capta leads via Google Maps e palavras-chave locais" },
-      { icon: Search, name: "Prospecção LinkedIn", desc: "Conecta com decisores e extrai contatos qualificados" },
-      { icon: BookOpen, name: "Roteiros", desc: "Scripts prontos para prospectar sem parecer invasivo" },
-      { icon: FileImage, name: "Material Digital", desc: "E-books e iscas digitais para atrair leads" },
-      { icon: Zap, name: "Anúncio de Atração", desc: "Campanhas para transformar desconhecidos em leads" },
+      { icon: Instagram, name: "Prospecção IG", desc: "Leads do seu concorrente" },
+      { icon: MapPin, name: "Prospecção Local", desc: "Via Google Maps" },
+      { icon: Search, name: "Prospecção LinkedIn", desc: "Decisores direto" },
+      { icon: BookOpen, name: "Roteiros", desc: "Scripts que não parecem spam" },
+      { icon: FileImage, name: "Material Digital", desc: "E-books e iscas" },
+      { icon: Zap, name: "Anúncios", desc: "Campanhas de atração prontas" },
     ],
   },
   {
@@ -65,26 +90,25 @@ const areas = [
     label: "Vendas",
     icon: DollarSign,
     color: "green-main",
-    tagline: "Convertendo oportunidades em contratos",
-    description: "Um motor que inicia o processo de vendas. Envio inteligente em massa usando IA ou mensagens pré-definidas com macros personalizados, gestão de contatos e roteiros estratégicos.",
+    tagline: "Leads viram contratos — no automático",
     modules: [
-      { icon: LayoutDashboard, name: "Painel", desc: "Dashboard com métricas, KPIs e insights em tempo real" },
-      { icon: Users, name: "Contatos", desc: "Gestão completa de leads, clientes e categorias" },
-      { icon: Kanban, name: "CRM", desc: "Funil de vendas Kanban — arraste e solte contatos" },
-      { icon: Workflow, name: "Campanhas", desc: "Construtor visual de fluxos inteligentes de WhatsApp" },
-      { icon: Plug, name: "Conexões", desc: "Gerencie instâncias do WhatsApp e status" },
-      { icon: FileCheck, name: "Proposta Comercial", desc: "Propostas profissionais com poucos cliques" },
-      { icon: ClipboardList, name: "Roteiros", desc: "Passo a passo do atendimento ao fechamento" },
-      { icon: Target, name: "Anúncio de Venda", desc: "Anúncios prontos para fechamento em alta conversão" },
+      { icon: LayoutDashboard, name: "Painel", desc: "KPIs em tempo real" },
+      { icon: Users, name: "Contatos", desc: "Gestão completa de leads" },
+      { icon: Kanban, name: "CRM", desc: "Funil Kanban arrasta e solta" },
+      { icon: Workflow, name: "Campanhas", desc: "Fluxos inteligentes WhatsApp" },
+      { icon: Plug, name: "Conexões", desc: "WhatsApp integrado" },
+      { icon: FileCheck, name: "Proposta", desc: "Profissional em 1 clique" },
+      { icon: ClipboardList, name: "Roteiros", desc: "Do atendimento ao fechamento" },
+      { icon: Target, name: "Anúncio de Venda", desc: "Alta conversão pronto" },
     ],
   },
 ]
 
-const colorMap: Record<string, { bg: string; text: string; border: string; activeBg: string; gradientFrom: string }> = {
-  primary: { bg: "bg-primary/10", text: "text-primary", border: "border-primary/20", activeBg: "bg-primary", gradientFrom: "from-primary/10" },
-  "blue-main": { bg: "bg-blue-main/10", text: "text-blue-main", border: "border-blue-main/20", activeBg: "bg-blue-main", gradientFrom: "from-blue-main/10" },
-  accent: { bg: "bg-accent/10", text: "text-accent", border: "border-accent/20", activeBg: "bg-accent", gradientFrom: "from-accent/10" },
-  "green-main": { bg: "bg-green-main/10", text: "text-green-main", border: "border-green-main/20", activeBg: "bg-green-main", gradientFrom: "from-green-main/10" },
+const colorMap: Record<string, { bg: string; text: string; border: string; activeBg: string }> = {
+  primary: { bg: "bg-primary/10", text: "text-primary", border: "border-primary/20", activeBg: "bg-primary" },
+  "blue-main": { bg: "bg-blue-main/10", text: "text-blue-main", border: "border-blue-main/20", activeBg: "bg-blue-main" },
+  accent: { bg: "bg-accent/10", text: "text-accent", border: "border-accent/20", activeBg: "bg-accent" },
+  "green-main": { bg: "bg-green-main/10", text: "text-green-main", border: "border-green-main/20", activeBg: "bg-green-main" },
 }
 
 export function ModulesDetail() {
@@ -98,22 +122,65 @@ export function ModulesDetail() {
 
         {/* Header */}
         <SectionReveal>
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-8">
             <span className="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-4 block">
               Dentro da MOV
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-surface mb-6">
-              Todos os módulos que você precisa.{" "}
+              Tudo que você precisaria contratar.{" "}
               <span className="text-gradient">Em um só lugar.</span>
             </h2>
-            <p className="text-lg text-surface-sec">
-              Cada área da MOV possui módulos especializados para resolver cada etapa da jornada de vendas do seu negócio contábil.
-            </p>
+          </div>
+        </SectionReveal>
+
+        {/* No Need to Hire - Impact Section */}
+        <SectionReveal delay={100}>
+          <div className="max-w-5xl mx-auto mb-20">
+            <div className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-green-main" />
+
+              <div className="text-center mb-10">
+                <h3 className="text-2xl md:text-3xl font-heading font-bold text-surface mb-3">
+                  Você <span className="text-red-main line-through decoration-2">não precisa contratar</span> nenhum deles:
+                </h3>
+                <p className="text-surface-sec text-lg">
+                  A MOV substitui toda essa equipe por <strong className="text-surface">R$ 97/mês</strong>.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                {noNeedToHire.map((item, i) => (
+                  <div key={i} className="group relative">
+                    <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 h-full transition-all duration-300 group-hover:shadow-lg group-hover:border-primary/20">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 rounded-xl bg-red-sec flex items-center justify-center shrink-0">
+                          <item.icon className="w-5 h-5 text-red-main" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-surface text-sm">{item.role}</p>
+                          <p className="text-xs text-red-main font-bold line-through">{item.cost}</p>
+                        </div>
+                      </div>
+                      <p className="text-sm text-surface-sec leading-relaxed">{item.replacement}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 text-center">
+                <div className="inline-flex items-center gap-3 bg-green-main/10 border border-green-main/20 px-6 py-3 rounded-2xl">
+                  <span className="text-sm text-surface-sec">Economia total:</span>
+                  <span className="text-xl font-heading font-extrabold text-green-main">R$ 9.000/mês</span>
+                  <span className="text-sm text-surface-sec">→ Você paga</span>
+                  <span className="text-xl font-heading font-extrabold text-primary">R$ 97/mês</span>
+                </div>
+              </div>
+            </div>
           </div>
         </SectionReveal>
 
         {/* Tabs */}
-        <SectionReveal delay={100}>
+        <SectionReveal delay={200}>
           <div className="flex flex-wrap justify-center gap-3 mb-14">
             {areas.map((area) => {
               const isActive = activeTab === area.id
@@ -149,10 +216,9 @@ export function ModulesDetail() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-heading font-bold text-surface">
-                    Área de {activeArea.label}{" "}
-                    <span className="text-surface-sec font-normal text-lg">— {activeArea.tagline}</span>
+                    {activeArea.label}
                   </h3>
-                  <p className="text-surface-sec mt-1 max-w-2xl">{activeArea.description}</p>
+                  <p className="text-surface-sec mt-1 text-lg">{activeArea.tagline}</p>
                 </div>
               </div>
             </div>

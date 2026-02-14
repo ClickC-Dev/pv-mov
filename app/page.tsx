@@ -7,6 +7,7 @@ import { Methodology } from "@/components/mov/methodology"
 import { ModulesDetail } from "@/components/mov/modules-detail"
 import { SocialProof } from "@/components/social-proof"
 import { FinancialSimulation } from "@/components/mov/financial-simulation"
+import { NotForYou } from "@/components/mov/not-for-you"
 import { Pricing } from "@/components/mov/pricing"
 import { Guarantee } from "@/components/mov/guarantee"
 import { Faq } from "@/components/mov/faq"
@@ -41,7 +42,10 @@ export default function Home() {
       {/* 8. Simulação financeira (ROI) */}
       <FinancialSimulation />
 
-      {/* 9. Oferta com urgência */}
+      {/* 9. Quem NÃO deve entrar */}
+      <NotForYou />
+
+      {/* 10. Oferta com urgência */}
       <Pricing />
 
       {/* 10. Garantia */}
