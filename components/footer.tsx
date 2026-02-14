@@ -13,11 +13,11 @@ export function Footer() {
 
         <div className="container-custom relative z-10 text-center max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 leading-tight">
-            Cada dia sem a MOV é um dia de{" "}
-            <span className="text-gradient">contratos perdidos.</span>
+            Cada dia sem estrutura é um dia que{" "}
+            <span className="text-gradient">seu concorrente pode fechar o cliente que seria seu.</span>
           </h2>
           <p className="text-xl text-slate-400 mb-4 max-w-2xl mx-auto">
-            Seus concorrentes já estão se posicionando. A pergunta é: você vai esperar até quando?
+            Enquanto você espera, outros escritórios estão construindo máquina de vendas. A diferença entre crescer e estagnar é <strong className="text-white">uma decisão.</strong>
           </p>
           <p className="text-lg text-white font-bold mb-10">
             Ative sua máquina. Pare de depender de indicação. Comece hoje.

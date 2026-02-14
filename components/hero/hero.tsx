@@ -40,9 +40,12 @@ export function Hero() {
 
             <SectionReveal delay={200}>
               <p className="max-w-xl text-lg lg:text-xl text-slate-400 leading-relaxed">
-                Contadores não quebram por falta de competência.{" "}
-                <strong className="text-white">Quebram por falta de previsibilidade.</strong>{" "}
-                A MOV cria sua própria máquina de aquisição — enquanto você trabalha, ela vende.
+                Enquanto você depende de indicação,{" "}
+                <strong className="text-white">outros escritórios estão construindo previsibilidade.</strong>
+              </p>
+              <p className="max-w-xl text-base text-slate-500 mt-3 leading-relaxed">
+                Estrutura é o que transforma esforço em crescimento previsível.{" "}
+                A MOV cria sua máquina de aquisição — enquanto você trabalha, ela vende.
               </p>
             </SectionReveal>
 

@@ -5,15 +5,15 @@ import { X, Check, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const notFor = [
-  "Quem quer resultado sem esforço nenhum",
-  "Quem não acredita no digital para contabilidade",
-  "Quem está satisfeito dependendo só de indicação",
-  "Quem não quer crescer nos próximos 12 meses",
+  "Quem quer continuar dependendo de indicação",
+  "Quem não quer organizar um funil de vendas",
+  "Quem acha que marketing é sorte",
+  "Quem prefere esperar o cliente cair do céu",
 ]
 
 const yesFor = [
-  "Contadores que querem previsibilidade de receita",
-  "Escritórios que estão cansados de depender de indicação",
+  "Quem quer previsibilidade de receita todo mês",
+  "Quem está cansado de ver concorrente crescer sem entender como",
   "Quem quer uma máquina vendendo enquanto trabalha",
   "Quem sabe que 1 cliente já paga 4 meses de MOV",
 ]
@@ -30,7 +30,7 @@ export function NotForYou() {
                 Antes de continuar
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-surface">
-                A MOV <span className="text-red-main">não é para todo mundo.</span>
+                Quem <span className="text-red-main">NÃO deve entrar</span> na MOV
               </h2>
             </div>
           </SectionReveal>

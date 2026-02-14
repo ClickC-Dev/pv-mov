@@ -6,6 +6,7 @@ import { CostComparison } from "@/components/mov/cost-comparison"
 import { Methodology } from "@/components/mov/methodology"
 import { ModulesDetail } from "@/components/mov/modules-detail"
 import { SocialProof } from "@/components/social-proof"
+import { VisualProof } from "@/components/mov/visual-proof"
 import { FinancialSimulation } from "@/components/mov/financial-simulation"
 import { NotForYou } from "@/components/mov/not-for-you"
 import { Pricing } from "@/components/mov/pricing"
@@ -38,6 +39,9 @@ export default function Home() {
 
       {/* 7. Prova social agressiva */}
       <SocialProof />
+
+      {/* 7.5. Prova visual real - MOV funcionando */}
+      <VisualProof />
 
       {/* 8. Simulação financeira (ROI) */}
       <FinancialSimulation />

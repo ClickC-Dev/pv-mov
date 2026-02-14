@@ -93,11 +93,21 @@ export function Pricing() {
         {/* Urgency Banner */}
         <SectionReveal delay={100}>
           <div className="flex justify-center mb-14">
-            <div className="inline-flex items-center gap-3 bg-red-sec border border-red-main/20 px-6 py-3 rounded-2xl">
-              <Clock className="w-5 h-5 text-red-main" />
-              <p className="text-sm font-bold text-red-main">
-                Vagas limitadas para ativação com desconto contábil. Ative antes que o preço suba.
-              </p>
+            <div className="bg-white rounded-3xl shadow-xl border border-red-main/15 p-6 md:p-8 max-w-3xl w-full relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-main to-accent" />
+              <div className="flex flex-col md:flex-row items-center gap-5">
+                <div className="w-14 h-14 rounded-2xl bg-red-sec flex items-center justify-center shrink-0">
+                  <Clock className="w-7 h-7 text-red-main" />
+                </div>
+                <div className="text-center md:text-left">
+                  <p className="text-lg md:text-xl font-heading font-bold text-surface mb-1">
+                    Quem ativa agora recebe o módulo <span className="text-primary">VIRA IR</span> incluso na temporada.
+                  </p>
+                  <p className="text-sm text-surface-sec">
+                    Ativações com suporte prioritário disponíveis por <strong className="text-red-main">tempo limitado</strong>. O preço pode subir a qualquer momento.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </SectionReveal>
