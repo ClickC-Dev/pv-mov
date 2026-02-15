@@ -34,20 +34,14 @@ export function Navbar() {
     >
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
+        {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="relative">
-            <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center font-heading font-black text-white text-sm tracking-tight">
-              MOV
-            </div>
-            <div className="absolute inset-0 rounded-lg bg-primary blur-lg opacity-40 group-hover:opacity-60 transition-opacity" />
-          </div>
-          <div className="hidden sm:block">
-            <span className="font-heading font-bold text-white text-lg">
-              MOV
-            </span>
-            <span className="text-xs text-slate-400 block leading-none -mt-0.5">
-              Máquina Online de Vendas
-            </span>
+          <div className="relative h-10 w-32">
+            <img
+              src="/clickc-negative.svg"
+              alt="ClickC Logo"
+              className="h-full w-full object-contain object-left"
+            />
           </div>
         </a>
 

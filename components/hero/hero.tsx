@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, AlertTriangle, TrendingUp, Users, FileCheck } from "lucide-react"
+import { ArrowRight, TrendingUp, Users, FileCheck, MessageCircle, Send } from "lucide-react"
 import { SectionReveal } from "@/components/ui/section-reveal"
 
 export function Hero() {
@@ -24,45 +24,54 @@ export function Hero() {
           {/* Content Column */}
           <div className="space-y-8">
             <SectionReveal>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-main/15 border border-red-main/30 text-sm font-bold">
-                <AlertTriangle className="w-4 h-4 text-red-main" />
-                <span className="text-red-main">Sua contabilidade está em risco</span>
-              </div>
+              <p className="text-slate-500 text-sm font-bold uppercase tracking-[0.2em]">
+                Para contadores que querem previsibilidade
+              </p>
             </SectionReveal>
 
             <SectionReveal delay={100}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold tracking-tight leading-[1.05]">
-                Se você ainda depende de indicação,{" "}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold tracking-tight leading-[1.05] text-white">
+                Você não tem problema de cliente.{" "}
                 <span className="text-gradient">
-                  está ficando para trás.
+                  Tem problema de estrutura.
                 </span>
               </h1>
             </SectionReveal>
 
             <SectionReveal delay={200}>
               <p className="max-w-xl text-lg lg:text-xl text-slate-400 leading-relaxed">
-                A MOV cria uma <strong className="text-white">máquina própria de aquisição de clientes</strong> para sua contabilidade.
-                Site. Conteúdo. Leads. CRM. IA.{" "}
-                <strong className="text-accent">Tudo rodando no automático.</strong>
+                Enquanto você depende de indicação,{" "}
+                <strong className="text-white">outros escritórios estão construindo previsibilidade.</strong>
+              </p>
+              <p className="max-w-xl text-base text-slate-500 mt-3 leading-relaxed">
+                Estrutura é o que transforma esforço em crescimento previsível.{" "}
+                A MOV cria sua máquina de aquisição — enquanto você trabalha, ela vende.
               </p>
             </SectionReveal>
 
             <SectionReveal delay={300}>
-              <div className="space-y-3">
-                <p className="text-sm font-bold text-slate-500 uppercase tracking-wider">Enquanto você trabalha, a MOV:</p>
-                {[
-                  "Gera leads qualificados todos os dias",
-                  "Publica conteúdo com autoridade no seu nome",
-                  "Faz follow-up automático via WhatsApp",
-                  "Fecha contratos enquanto você dorme",
-                ].map((text, i) => (
-                  <div key={i} className="flex items-center gap-3 text-slate-300 group">
-                    <div className="w-5 h-5 rounded-full bg-green-main/20 flex items-center justify-center shrink-0">
-                      <div className="w-2 h-2 rounded-full bg-green-main" />
-                    </div>
-                    <span className="text-base">{text}</span>
-                  </div>
-                ))}
+              <div className="flex items-center gap-6 flex-wrap">
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="w-2 h-2 rounded-full bg-green-main" />
+                  <span className="text-slate-400">Site</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="w-2 h-2 rounded-full bg-green-main" />
+                  <span className="text-slate-400">Conteúdo</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="w-2 h-2 rounded-full bg-green-main" />
+                  <span className="text-slate-400">Leads</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="w-2 h-2 rounded-full bg-green-main" />
+                  <span className="text-slate-400">IA</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="w-2 h-2 rounded-full bg-green-main" />
+                  <span className="text-slate-400">CRM</span>
+                </div>
+                <span className="text-accent font-bold text-sm">Tudo conectado. Tudo automático.</span>
               </div>
             </SectionReveal>
 
@@ -70,7 +79,7 @@ export function Hero() {
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <a href="https://app.clickc.com.br" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="w-full sm:w-auto font-bold text-lg shadow-xl shadow-primary/30 animate-glow-pulse">
-                    Quero minha máquina rodando
+                    Quero previsibilidade no meu negócio
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
@@ -83,19 +92,18 @@ export function Hero() {
             </SectionReveal>
           </div>
 
-          {/* Visual Column - Dashboard Preview */}
+          {/* Visual Column - Live Proof */}
           <SectionReveal direction="right" delay={300}>
             <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-              {/* Main Card */}
               <div className="relative rounded-3xl glass p-8 shadow-2xl">
                 {/* Header */}
                 <div className="flex items-center justify-between border-b border-white/10 pb-5 mb-6">
                   <div>
-                    <p className="text-xs text-slate-500 uppercase tracking-wider font-medium">Painel MOV</p>
-                    <p className="font-heading font-bold text-xl text-white mt-1">Resultados reais</p>
+                    <p className="text-xs text-slate-500 uppercase tracking-wider font-medium">Painel MOV — ao vivo</p>
+                    <p className="font-heading font-bold text-xl text-white mt-1">Contabilidade Silva &amp; Associados</p>
                   </div>
-                  <div className="h-12 w-12 rounded-2xl bg-green-main/15 flex items-center justify-center">
-                    <TrendingUp className="h-6 w-6 text-green-main" />
+                  <div className="h-10 w-10 rounded-xl bg-green-main/15 flex items-center justify-center">
+                    <TrendingUp className="h-5 w-5 text-green-main" />
                   </div>
                 </div>
 
@@ -118,19 +126,44 @@ export function Hero() {
                   </div>
                 </div>
 
-                {/* Live notification */}
-                <div className="rounded-2xl bg-green-main/10 border border-green-main/20 p-4 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-green-main/20 flex items-center justify-center shrink-0">
-                    <div className="w-3 h-3 rounded-full bg-green-main animate-pulse" />
+                {/* Live feed - visual proof */}
+                <div className="space-y-3">
+                  <div className="rounded-xl bg-bg-dark/60 p-3 border border-white/5 flex items-center gap-3">
+                    <div className="w-7 h-7 rounded-full bg-green-main/20 flex items-center justify-center shrink-0">
+                      <MessageCircle className="w-3.5 h-3.5 text-green-main" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[11px] text-white font-medium truncate">Lead respondeu no WhatsApp</p>
+                      <p className="text-[10px] text-slate-500">João Silva — Empresa XYZ Ltda</p>
+                    </div>
+                    <span className="text-[9px] text-accent font-mono shrink-0">2min</span>
                   </div>
-                  <div className="flex-1">
-                    <p className="text-xs font-bold text-green-main">Novo contrato fechado agora</p>
-                    <p className="text-[10px] text-slate-400">Empresa ABC - R$ 2.400/mês via MOV</p>
+
+                  <div className="rounded-xl bg-bg-dark/60 p-3 border border-white/5 flex items-center gap-3">
+                    <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                      <Send className="w-3.5 h-3.5 text-primary" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[11px] text-white font-medium truncate">Proposta enviada automaticamente</p>
+                      <p className="text-[10px] text-slate-500">R$ 890/mês — Abertura + Contábil</p>
+                    </div>
+                    <span className="text-[9px] text-accent font-mono shrink-0">15min</span>
+                  </div>
+
+                  <div className="rounded-xl bg-green-main/10 p-3 border border-green-main/20 flex items-center gap-3">
+                    <div className="w-7 h-7 rounded-full bg-green-main/20 flex items-center justify-center shrink-0">
+                      <div className="w-3 h-3 rounded-full bg-green-main animate-pulse" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[11px] text-green-main font-bold truncate">Contrato fechado!</p>
+                      <p className="text-[10px] text-slate-400">Maria Costa — R$ 1.200/mês</p>
+                    </div>
+                    <span className="text-[9px] text-green-main font-mono font-bold shrink-0">agora</span>
                   </div>
                 </div>
               </div>
 
-              {/* Floating decorative elements */}
+              {/* Floating decorative */}
               <div className="absolute -top-6 -right-6 h-32 w-32 rounded-full bg-gradient-to-br from-primary/30 to-transparent blur-2xl animate-float" />
               <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-gradient-to-br from-accent/20 to-transparent blur-2xl animate-float" style={{ animationDelay: "-3s" }} />
             </div>
