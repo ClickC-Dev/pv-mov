@@ -33,7 +33,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+      <body
+        className="antialiased"
+        style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
+        suppressHydrationWarning={true}
+      >
         {children}
       </body>
     </html>
